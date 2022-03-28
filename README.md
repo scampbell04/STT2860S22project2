@@ -1,1 +1,1 @@
-# STT2860S22project2
+# STT2860S22 Repository for Project #2
