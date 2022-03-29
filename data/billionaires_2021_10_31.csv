@@ -18,9 +18,9 @@ Rank,Name,Total_Net_Worth,Total_Net_Worth_Bil,LastChange,LastChange_Bil,YTDChang
 17,Zhong Shanshan ,$65.2B,65.2,-$68.5M,-0.0685,-$13.0B,-13,China,Diversified
 18,Alice Walton ,$64.6B,64.6,+$325M,0.325,+$2.26B,2.26,UnitedStates,Retail
 19,Carlos Slim ,$63.4B,63.4,-$280M,-0.28,+$7.13B,7.13,Mexico,Diversified
-20,Phil Knight&family ,$62.6B,62.6,+$927M,0.927,+$8.75B,8.75,UnitedStates,Consumer
+20,Phil Knight & family ,$62.6B,62.6,+$927M,0.927,+$8.75B,8.75,UnitedStates,Consumer
 21,Charles Koch ,$60.2B,60.2,-$643M,-0.643,+$3.32B,3.32,UnitedStates,Industrial
-22,Julia Flesher Koch&family,$60.2B,60.2,-$643M,-0.643,+$3.32B,3.32,UnitedStates,Industrial
+22,Julia Flesher Koch & family,$60.2B,60.2,-$643M,-0.643,+$3.32B,3.32,UnitedStates,Industrial
 23,Zeng Yuqun ,$57.3B,57.3,+$2.74B,2.74,+$26.3B,26.3,HongKong,Industrial
 24,MacKenzie Scott ,$56.9B,56.9,-$1.29B,-1.29,-$1.59B,-1.59,UnitedStates,Technology
 25,Michael Dell ,$55.9B,55.9,-$10.1M,-0.0101,+$15.8B,15.8,UnitedStates,Technology
@@ -34,7 +34,7 @@ Rank,Name,Total_Net_Worth,Total_Net_Worth_Bil,LastChange,LastChange_Bil,YTDChang
 33,Stephen Schwarzman ,$39.8B,39.8,-$221M,-0.221,+$18.3B,18.3,UnitedStates,Finance
 34,Azim Premji ,$37.4B,37.4,-$616M,-0.616,+$12.0B,12,India,Technology
 35,Klaus-Michael Kuehne ,$36.0B,36,-$367M,-0.367,+$11.8B,11.8,Germany,Industrial
-36,Giovanni Ferrero&family ,$34.2B,34.2,-$866M,-0.866,+$112M,0.112,Italy,Food&Beverage
+36,Giovanni Ferrero & family ,$34.2B,34.2,-$866M,-0.866,+$112M,0.112,Italy,Food&Beverage
 37,Tadashi Yanai ,$34.1B,34.1,+$333M,0.333,-$11.1B,-11.1,Japan,Retail
 38,Takemitsu Takizaki ,$33.8B,33.8,+$1.38B,1.38,+$1.41B,1.41,Japan,Technology
 39,Leonard Lauder ,$33.5B,33.5,-$102M,-0.102,+$5.66B,5.66,UnitedStates,Consumer
@@ -88,8 +88,8 @@ Rank,Name,Total_Net_Worth,Total_Net_Worth_Bil,LastChange,LastChange_Bil,YTDChang
 87,Andreas Struengmann ,$21.6B,21.6,-$335M,-0.335,+$11.5B,11.5,Germany,Health Care
 88,Jorge Paulo Lemann,$21.4B,21.4,-$551M,-0.551,-$2.45B,-2.45,Brazil,Food&Beverage
 89,Stefan Quandt ,$21.2B,21.2,-$244M,-0.244,+$2.42B,2.42,Germany,Industrial
-90,Ernesto Bertarelli&family ,$21.1B,21.1,-$99.9M,-0.0999,+$1.10B,1.1,Switzerland,Diversified
-91,Iris Fontbona&family ,$21.0B,21,-$308M,-0.308,+$809M,0.809,Chile,Commodities
+90,Ernesto Bertarelli & family ,$21.1B,21.1,-$99.9M,-0.0999,+$1.10B,1.1,Switzerland,Diversified
+91,Iris Fontbona & family ,$21.0B,21,-$308M,-0.308,+$809M,0.809,Chile,Commodities
 92,Li Xiting ,$21.0B,21,+$713M,0.713,-$2.22B,-2.22,Singapore,Health Care
 93,Zhang Zhidong ,$20.8B,20.8,-$307M,-0.307,-$3.48B,-3.48,China,Technology
 94,Elaine Marshall ,$20.7B,20.7,-$224M,-0.224,+$1.12B,1.12,UnitedStates,Industrial
@@ -98,7 +98,7 @@ Rank,Name,Total_Net_Worth,Total_Net_Worth_Bil,LastChange,LastChange_Bil,YTDChang
 97,Wang Xing ,$20.0B,20,-$230M,-0.23,-$1.73B,-1.73,China,Technology
 98,Jiang Rensheng ,$20.0B,20,+$351M,0.351,+$1.67B,1.67,China,Health Care
 99,Stefan Persson ,$19.7B,19.7,-$774M,-0.774,-$1.50B,-1.5,Sweden,Retail
-100,Gustaf Douglas&family ,$19.5B,19.5,-$396M,-0.396,+$6.07B,6.07,Sweden,Diversified
+100,Gustaf Douglas & family ,$19.5B,19.5,-$396M,-0.396,+$6.07B,6.07,Sweden,Diversified
 101,Donald Newhouse ,$19.3B,19.3,-$499M,-0.499,+$806M,0.806,UnitedStates,Media&Telecom
 102,Aliko Dangote ,$19.2B,19.2,+$119M,0.119,+$1.41B,1.41,Nigeria,Industrial
 103,Robert Kuok ,$19.0B,19,-$51.8M,-0.0518,+$1.58B,1.58,Malaysia,Diversified
@@ -112,7 +112,7 @@ Rank,Name,Total_Net_Worth,Total_Net_Worth_Bil,LastChange,LastChange_Bil,YTDChang
 111,Wang Wei ,$18.4B,18.4,+$384M,0.384,-$6.78B,-6.78,China,Services
 112,Andrey Melnichenko ,$18.3B,18.3,+$11.5M,0.0115,+$194M,0.194,RussianFederation,Industrial
 113,Ernie Garcia ,$18.2B,18.2,+$276M,0.276,+$2.76B,2.76,UnitedStates,Consumer
-114,Sara Mota de Larrea&family,$18.1B,18.1,+$13.0M,0.013,+$1.29B,1.29,Mexico,Commodities
+114,Sara Mota de Larrea & family,$18.1B,18.1,+$13.0M,0.013,+$1.29B,1.29,Mexico,Commodities
 115,Gina Rinehart ,$18.1B,18.1,+$430M,0.43,-$10.6B,-10.6,Australia,Commodities
 116,Michael Hartono ,$17.7B,17.7,+$224M,0.224,+$1.40B,1.4,Indonesia,Diversified
 117,Richard Liu ,$17.7B,17.7,-$556M,-0.556,-$2.04B,-2.04,China,Technology
@@ -184,21 +184,21 @@ Rank,Name,Total_Net_Worth,Total_Net_Worth_Bil,LastChange,LastChange_Bil,YTDChang
 183,Victoria Mars ,$11.9B,11.9,-$253M,-0.253,+$1.51B,1.51,UnitedStates,Food&Beverage
 184,Pamela Mars-Wright ,$11.9B,11.9,-$253M,-0.253,+$1.51B,1.51,UnitedStates,Food&Beverage
 185,Valerie Mars ,$11.9B,11.9,-$253M,-0.253,+$1.51B,1.51,UnitedStates,Food&Beverage
-186,Jorge Moll&family ,$11.9B,11.9,-$22.4M,-0.0224,-$2.47B,-2.47,Brazil,Health Care
+186,Jorge Moll & family ,$11.9B,11.9,-$22.4M,-0.0224,-$2.47B,-2.47,Brazil,Health Care
 187,Joe Gebbia ,$11.8B,11.8,-$70.4M,-0.0704,+$1.58B,1.58,UnitedStates,Services
 188,Melinda French Gates,$11.8B,11.8,-$53.0M,-0.053,+$11.8B,11.8,UnitedStates,Diversified
 189,Robin Li ,$11.8B,11.8,-$452M,-0.452,-$3.84B,-3.84,China,Technology
 190,Nathan Blecharczyk ,$11.8B,11.8,-$68.3M,-0.0683,+$1.50B,1.5,UnitedStates,Services
 191,Liu Jincheng ,$11.7B,11.7,-$29.9M,-0.0299,+$3.65B,3.65,China,Industrial
 192,Eyal Ofer ,$11.7B,11.7,+$4.94M,0.00494,+$1.35B,1.35,Israel,Services
-193,Alejandro Santo Domingo&family,$11.7B,11.7,-$259M,-0.259,-$821M,-0.821,Colombia,Food&Beverage
+193,Alejandro Santo Domingo & family,$11.7B,11.7,-$259M,-0.259,-$821M,-0.821,Colombia,Food&Beverage
 194,Steven Rales ,$11.6B,11.6,+$243M,0.243,+$3.38B,3.38,UnitedStates,Industrial
 195,Sarath Ratanavadi ,$11.5B,11.5,-$247M,-0.247,+$2.29B,2.29,Thailand,Energy
 196,Raymond Kwok ,$11.5B,11.5,+$41.3M,0.0413,+$341M,0.341,HongKong,Real Estate
 197,Jim Davis ,$11.5B,11.5,+$76.0M,0.076,-$2.18B,-2.18,UnitedStates,Consumer
 198,Marc Benioff ,$11.5B,11.5,+$30.6M,0.0306,+$2.54B,2.54,UnitedStates,Technology
 199,Sunil Mittal ,$11.4B,11.4,-$103M,-0.103,+$2.55B,2.55,India,Media&Telecom
-200,Paolo Rocca&family ,$11.4B,11.4,-$140M,-0.14,+$1.41B,1.41,Italy,Commodities
+200,Paolo Rocca & family ,$11.4B,11.4,-$140M,-0.14,+$1.41B,1.41,Italy,Commodities
 201,Patrick Collison ,$11.4B,11.4,$0 ,0,+$7.08B,7.08,Ireland,Technology
 202,John Collison ,$11.4B,11.4,$0 ,0,+$7.08B,7.08,Ireland,Technology
 203,Suleiman Kerimov ,$11.3B,11.3,-$98.1M,-0.0981,+$1.44B,1.44,RussianFederation,Commodities
@@ -214,12 +214,12 @@ Rank,Name,Total_Net_Worth,Total_Net_Worth_Bil,LastChange,LastChange_Bil,YTDChang
 213,Steve Cohen ,$11.1B,11.1,+$5.43M,0.00543,+$920M,0.92,UnitedStates,Finance
 214,Rinat Akhmetov ,$11.1B,11.1,-$103M,-0.103,+$3.53B,3.53,Ukraine,Industrial
 215,Carl Bennet ,$11.0B,11,-$228M,-0.228,+$4.18B,4.18,Sweden,Finance
-216,Anders Holch Povlsen&family,$11.0B,11,-$115M,-0.115,+$1.65B,1.65,Denmark,Retail
+216,Anders Holch Povlsen & family,$11.0B,11,-$115M,-0.115,+$1.65B,1.65,Denmark,Retail
 217,John Grayken ,$11.0B,11,-$76.6M,-0.0766,+$2.80B,2.8,Ireland,Finance
 218,Zhou Qunfei ,$11.0B,11,+$690M,0.69,-$4.02B,-4.02,China,Technology
 219,Antonia Axson Johnson,$11.0B,11,-$45.9M,-0.0459,+$1.86B,1.86,Sweden,Industrial
 220,Bobby Murphy ,$10.7B,10.7,-$357M,-0.357,+$657M,0.657,UnitedStates,Technology
-221,Heinrich Deichmann&family ,$10.7B,10.7,-$179M,-0.179,+$140M,0.14,Germany,Retail
+221,Heinrich Deichmann & family ,$10.7B,10.7,-$179M,-0.179,+$140M,0.14,Germany,Retail
 222,Harry Triguboff ,$10.7B,10.7,$0 ,0,+$1.01B,1.01,Australia,Real Estate
 223,Michael Platt ,$10.7B,10.7,$0 ,0,+$5.80B,5.8,UnitedKingdom,Finance
 224,Stephane Bancel ,$10.7B,10.7,-$83.7M,-0.0837,+$7.41B,7.41,France,Health Care
@@ -237,7 +237,7 @@ Rank,Name,Total_Net_Worth,Total_Net_Worth_Bil,LastChange,LastChange_Bil,YTDChang
 236,Laurent Dassault ,$10.2B,10.2,-$45.1M,-0.0451,+$2.57B,2.57,France,Diversified
 237,Marie-Helene Habert-Dassault ,$10.2B,10.2,-$45.1M,-0.0451,+$2.57B,2.57,France,Diversified
 238,Thierry Dassault ,$10.2B,10.2,-$45.1M,-0.0451,+$2.57B,2.57,France,Diversified
-239,Johann Rupert&family ,$10.1B,10.1,-$155M,-0.155,+$2.10B,2.1,SouthAfrica,Diversified
+239,Johann Rupert & family ,$10.1B,10.1,-$155M,-0.155,+$2.10B,2.1,SouthAfrica,Diversified
 240,Emmanuel Besnier ,$10.1B,10.1,-$110M,-0.11,-$66.9M,-0.0669,France,Food&Beverage
 241,Marcel Telles ,$10.1B,10.1,-$279M,-0.279,-$1.22B,-1.22,Brazil,Food&Beverage
 242,Evan Spiegel ,$10.0B,10,-$310M,-0.31,+$619M,0.619,UnitedStates,Technology
@@ -316,7 +316,7 @@ Rank,Name,Total_Net_Worth,Total_Net_Worth_Bil,LastChange,LastChange_Bil,YTDChang
 315,Ned Johnson IV,$8.32B,8.32,-$77.7M,-0.0777,+$989M,0.989,UnitedStates,Finance
 316,Elizabeth Johnson ,$8.32B,8.32,-$75.4M,-0.0754,+$989M,0.989,UnitedStates,Finance
 317,Oleg Tinkov ,$8.30B,8.3,-$105M,-0.105,+$4.30B,4.3,RussianFederation,Finance
-318,Martin Viessmann&family ,$8.29B,8.29,-$90.4M,-0.0904,+$1.30B,1.3,Germany,Industrial
+318,Martin Viessmann & family ,$8.29B,8.29,-$90.4M,-0.0904,+$1.30B,1.3,Germany,Industrial
 319,Chase Coleman ,$8.27B,8.27,+$10.6M,0.0106,+$2.91B,2.91,UnitedStates,Finance
 320,Johann Graf ,$8.26B,8.26,+$70.8M,0.0708,-$1.82B,-1.82,Austria,Entertainment
 321,Mat Ishbia ,$8.26B,8.26,+$33.8M,0.0338,-$3.09B,-3.09,UnitedStates,Finance
@@ -350,9 +350,9 @@ Rank,Name,Total_Net_Worth,Total_Net_Worth_Bil,LastChange,LastChange_Bil,YTDChang
 349,Leng You-Bin ,$7.96B,7.96,+$147M,0.147,-$2.78B,-2.78,China,Consumer
 350,Tatyana Bakalchuk ,$7.96B,7.96,-$162M,-0.162,-$1.13B,-1.13,RussianFederation,Technology
 351,Steven Spielberg ,$7.90B,7.9,$0 ,0,+$750M,0.75,UnitedStates,Entertainment
-352,Charles Butt&family ,$7.88B,7.88,$0 ,0,+$2.56B,2.56,UnitedStates,Retail
+352,Charles Butt & family ,$7.88B,7.88,$0 ,0,+$2.56B,2.56,UnitedStates,Retail
 353,Frank Lowy ,$7.85B,7.85,-$75.0M,-0.075,+$450M,0.45,Australia,Real Estate
-354,Juan Beckmann Vidal&family,$7.82B,7.82,+$141M,0.141,-$605M,-0.605,Mexico,Food&Beverage
+354,Juan Beckmann Vidal & family,$7.82B,7.82,+$141M,0.141,-$605M,-0.605,Mexico,Food&Beverage
 355,Takahisa Takahara ,$7.80B,7.8,+$64.2M,0.0642,-$1.30B,-1.3,Japan,Consumer
 356,Shahid Khan ,$7.73B,7.73,+$2.35M,0.00235,-$465M,-0.465,UnitedStates,Consumer
 357,Alexey Kuzmichev ,$7.73B,7.73,-$58.2M,-0.0582,+$308M,0.308,RussianFederation,Diversified
@@ -369,7 +369,7 @@ Rank,Name,Total_Net_Worth,Total_Net_Worth_Bil,LastChange,LastChange_Bil,YTDChang
 368,George Soros ,$7.50B,7.5,$0 ,0,-$100M,-0.1,UnitedStates,Finance
 369,Terry Pegula ,$7.46B,7.46,-$121k,-0.000141,+$1.16B,1.16,UnitedStates,Energy
 370,Nancy Laurie ,$7.45B,7.45,+$37.1M,0.0371,+$475M,0.475,UnitedStates,Retail
-371,Anthony Bamford&family ,$7.44B,7.44,$0 ,0,-$382M,-0.382,UnitedKingdom,Industrial
+371,Anthony Bamford & family ,$7.44B,7.44,$0 ,0,-$382M,-0.382,UnitedKingdom,Industrial
 372,Jorn Rausing ,$7.43B,7.43,-$130M,-0.13,-$2.38B,-2.38,Sweden,Services
 373,Axel Oberwelland ,$7.40B,7.4,-$47.4M,-0.0474,+$1.57B,1.57,Germany,Food&Beverage
 374,Sergey Gordeev ,$7.39B,7.39,+$55.4M,0.0554,+$3.59B,3.59,RussianFederation,Real Estate
@@ -400,7 +400,7 @@ Rank,Name,Total_Net_Worth,Total_Net_Worth_Bil,LastChange,LastChange_Bil,YTDChang
 399,Gaye Farncombe ,$7.11B,7.11,+$24.6M,0.0246,+$1.76B,1.76,Canada,Media&Telecom
 400,Jon Gray ,$7.10B,7.1,-$39.0M,-0.039,+$3.22B,3.22,UnitedStates,Finance
 401,Mike Novogratz ,$7.07B,7.07,-$164M,-0.164,+$4.11B,4.11,UnitedStates,Finance
-402,Peter-Alexander Wacker&family ,$7.05B,7.05,+$9.51M,0.00951,+$1.32B,1.32,Germany,Industrial
+402,Peter-Alexander Wacker & family ,$7.05B,7.05,+$9.51M,0.00951,+$1.32B,1.32,Germany,Industrial
 403,Vera Michalski-Hoffmann ,$7.03B,7.03,-$61.9M,-0.0619,+$1.18B,1.18,Switzerland,Health Care
 404,Maja Hoffmann ,$7.03B,7.03,-$61.9M,-0.0619,+$1.18B,1.18,Switzerland,Health Care
 405,Lynn Schusterman ,$7.02B,7.02,-$11.6M,-0.0116,+$815M,0.815,UnitedStates,Energy
@@ -417,7 +417,7 @@ Rank,Name,Total_Net_Worth,Total_Net_Worth_Bil,LastChange,LastChange_Bil,YTDChang
 416,Steve Feinberg ,$6.94B,6.94,-$17.1M,-0.0171,+$3.49B,3.49,UnitedStates,Finance
 417,Ruan Liping ,$6.89B,6.89,+$38.8M,0.0388,-$1.67B,-1.67,China,Industrial
 418,Mikheil Lomtadze ,$6.89B,6.89,+$152M,0.152,+$3.66B,3.66,Georgia,Finance
-419,Ashwin Dani&family ,$6.88B,6.88,-$48.1M,-0.0481,+$1.07B,1.07,India,Industrial
+419,Ashwin Dani & family ,$6.88B,6.88,-$48.1M,-0.0481,+$1.07B,1.07,India,Industrial
 420,Nassef Sawiris ,$6.87B,6.87,-$67.8M,-0.0678,+$273M,0.273,Egypt,Industrial
 421,Ruan Xueping ,$6.87B,6.87,+$38.8M,0.0388,-$1.67B,-1.67,China,Industrial
 422,Fredrik Lundberg ,$6.85B,6.85,-$104M,-0.104,+$447M,0.447,Sweden,Real Estate
@@ -441,7 +441,7 @@ Rank,Name,Total_Net_Worth,Total_Net_Worth_Bil,LastChange,LastChange_Bil,YTDChang
 440,Tony Ressler ,$6.56B,6.56,-$94.3M,-0.0943,+$2.40B,2.4,UnitedStates,Finance
 441,David Bonderman ,$6.55B,6.55,-$25.6M,-0.0256,+$1.99B,1.99,UnitedStates,Finance
 442,Olav Thon ,$6.51B,6.51,-$229M,-0.229,+$682M,0.682,Norway,Real Estate
-443,Mahendra Choksi&family ,$6.51B,6.51,-$71.5M,-0.0715,+$558M,0.558,India,Industrial
+443,Mahendra Choksi & family ,$6.51B,6.51,-$71.5M,-0.0715,+$558M,0.558,India,Industrial
 444,Joe Lewis ,$6.48B,6.48,-$50.5M,-0.0505,-$17.6M,-0.0176,UnitedKingdom,Diversified
 445,Charles Cadogan ,$6.46B,6.46,-$25.0M,-0.025,-$602M,-0.602,UnitedKingdom,Real Estate
 446,Su Hua ,$6.44B,6.44,-$21.1M,-0.0211,-$748M,-0.748,China,Technology
@@ -454,7 +454,7 @@ Rank,Name,Total_Net_Worth,Total_Net_Worth_Bil,LastChange,LastChange_Bil,YTDChang
 453,Kjeld Kirk Kristiansen,$6.41B,6.41,-$110M,-0.11,-$698M,-0.698,Denmark,Consumer
 454,Lai Meisong ,$6.40B,6.4,-$182M,-0.182,+$229M,0.229,China,Services
 455,Ken Fisher ,$6.35B,6.35,+$2.96M,0.00296,+$2.24B,2.24,UnitedStates,Finance
-456,Abhay Vakil&family ,$6.32B,6.32,-$45.6M,-0.0456,+$544M,0.544,India,Industrial
+456,Abhay Vakil & family ,$6.32B,6.32,-$45.6M,-0.0456,+$544M,0.544,India,Industrial
 457,Tom Morris ,$6.30B,6.3,-$42.9M,-0.0429,+$700M,0.7,UnitedKingdom,Retail
 458,Leonard Stern ,$6.27B,6.27,$0 ,0,+$774M,0.774,UnitedStates,Real Estate
 459,Kenneth Dart ,$6.25B,6.25,-$152M,-0.152,-$64.4M,-0.0644,Cayman,Islands
@@ -473,7 +473,7 @@ Rank,Name,Total_Net_Worth,Total_Net_Worth_Bil,LastChange,LastChange_Bil,YTDChang
 472,Hui Wing Mau,$6.15B,6.15,-$96.0M,-0.096,-$3.35B,-3.35,HongKong,Real Estate
 473,Henry Laufer ,$6.15B,6.15,$0 ,0,+$900M,0.9,UnitedStates,Finance
 474,M A Yusuff Ali,$6.13B,6.13,-$30.6M,-0.0306,+$702M,0.702,UAE,Food&Beverage
-475,Johan Johannson&family ,$6.12B,6.12,-$92.3M,-0.0923,+$780M,0.78,Norway,Retail
+475,Johan Johannson & family ,$6.12B,6.12,-$92.3M,-0.0923,+$780M,0.78,Norway,Retail
 476,Richard Branson ,$6.12B,6.12,+$5.78M,0.00578,+$398M,0.398,UnitedKingdom,Diversified
 477,Tony James ,$6.12B,6.12,-$27.4M,-0.0274,+$2.41B,2.41,UnitedStates,Finance
 478,Jiang Bin ,$6.12B,6.12,+$210M,0.21,+$33.7M,0.0337,China,Technology
