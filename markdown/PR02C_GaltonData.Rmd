@@ -1,6 +1,6 @@
 ---
 title: "Project 2C: Galton Data"
-author: "PUT YOUR NAME HERE"
+author: "Sally Campbell"
 date: '`r format(Sys.time(), "%A, %B %d, %Y @ %I:%M %p")`'
 output: 
   html_document: 
@@ -23,7 +23,10 @@ knitr::opts_chunk$set(
 ### Packages Used
 
 ```{r loadpackages}
-
+library(tidyverse)
+library(dplyr)
+library(magrittr)
+library(ggplot2)
 ```
 
 ### Datasets Used
@@ -35,20 +38,104 @@ Francis Galton, a cousin of Charles Darwin, studied the relationship between par
 #### Galton Main Dataset
 
 ```{r loadmaindata}
+url <- "https://raw.githubusercontent.com/STAT-JET-ASU/Datasets/master/Instructor/galtonfamiliesmain.csv"
+if(!dir.exists("./data/"))
+{dir.create("./data/")}
+if(!file.exists("./data/galtonfamiliesmain.csv")){
+    download.file(url, destfile = "./data/galtonfamiliesmain.csv")}
+data_main <- read_csv("./data/galtonfamiliesmain.csv")
+glimpse(data_main)
+        
+```
 
+```{r}
+data_main <- data_main %>%
+  mutate(
+    familyID = as.numeric(ifelse(FamilyID == "136A", 205, FamilyID)),
+    motherT = Mother * 1.08,
+    midparent = (Father + motherT) / 2,
+    heightT = ifelse(Child == "Daughter", Height * 1.08, Height)
+  ) %>%
+  select(
+    familyID,
+    child_num = Children,
+    father = Father,
+    mother = Mother,
+    motherT,
+    midparent,
+    child_gen = Child,
+    height = Height,
+    heightT
+  ) %>%
+  arrange(
+    familyID,
+    desc(child_gen),
+    desc(height)
+  )
+glimpse(data_main)
 ```
 
 #### Galton Subset Dataset
 
 ```{r loadsubdata}
+url <- "https://raw.githubusercontent.com/STAT-JET-ASU/Datasets/master/Instructor/galtonfamiliessub.csv"
+if(!dir.exists("./data/"))
+{dir.create("./data/")}
+if(!file.exists("./data/galtonfamiliessub.csv")){
+    download.file(url, destfile = "./data/galtonfamiliessub.csv")}
+data_sub <- read_csv("./data/galtonfamiliessub.csv")
+glimpse(data_sub)
 
+```
+
+```{r}
+data_sub <- data_sub %>%
+  mutate(
+    father = FatherR + 60,
+    mother = MotherR + 60,
+    motherT = mother * 1.08,
+    midparent = (father + motherT) / 2,
+    height = HeightR + 60,
+    heightT = ifelse(Child == "Daughter", height * 1.08, height)
+  ) %>%
+  select(
+    familyID = FamilyID,
+    child_num = Children,
+    father,
+    mother,
+    motherT,
+    midparent,
+    child_gen = Child,
+    height,
+    heightT
+  ) %>%
+  arrange(
+    familyID,
+    desc(child_gen),
+    desc(height)
+  )
+glimpse(data_sub)
 ```
 
 #### Galton Notebook Dataset
 
 ```{r loadnotebook}
-
+url <- "https://raw.githubusercontent.com/STAT-JET-ASU/Datasets/master/Instructor/galtonfamiliesnotebook.csv"
+if(!dir.exists("./data/"))
+{dir.create("./data/")}
+if(!file.exists("./data/galtonfamiliesnotebook.csv")){
+    download.file(url, destfile = "./data/galtonfamiliesnotebook.csv")}
+data_notebook <- read_csv("./data/galtonfamiliesnotebook.csv")
+glimpse(data_notebook)
 ```
+
+```{r}
+data_notebook <- data_notebook %>%
+  select(familyID = FamilyID,
+         page = Page)
+glimpse(data_notebook)
+```
+
 
 <hr>
 
@@ -76,15 +163,25 @@ Load the three Galton datasets and use `glimpse()` to explore their structures. 
    * in order of height within each sex of child
 
 ```{r assembledata1}
-
+bind_rows(data_main, data_sub) -> data_new
+merge(x=data_new, y=data_notebook, by="familyID") %>%
+  arrange(familyID,
+          factor(child_gen, levels=c('Son','Daugter')),
+          height) -> data_all
+glimpse(data_all)
 ```
+
 
 #### Dataset #2
 
 From Dataset #1, select the variables `familyid` and `num_children`, then reduce the dataset so it contains only one unique row per family. Use `glimpse()` to display the result. (Hint: The final dataset should have 205 rows/observations and two variables/columns.)
 
 ```{r assembledata2}
-
+dataset_2 <- data_all %>%
+  select(familyid = familyID,
+         num_children = child_num) %>%
+  distinct()
+glimpse(dataset_2)
 ```
 
 ### Visualization 1: Updated Scatterplot
@@ -118,7 +215,15 @@ Include the following.
 * use `theme()` to move the legend to the bottom of the scatterplot
 
 ```{r updatedscatterplot}
-
+p1 <- ggplot(data_all, aes(x=height, y=midparent, color=child_gen)) +
+  geom_point(alpha=.45, size=2.5) +
+  scale_color_manual(values = c("#FFB000","#648FFF")) +
+  scale_x_continuous(breaks= 55:80) + 
+  scale_y_continuous(breaks= 64:76) + 
+  coord_fixed() + 
+  labs(color = "Gender of child", title = "Average of the parents’ heights versus the height of children by gender", x = "Childrens height in inches", y="Parents height in inches") + 
+  theme_linedraw()
+p1 + theme(legend.position = "bottom")
 ```
 
 ### Visualization 2: Number of Children
@@ -128,6 +233,12 @@ Include the following.
 Create a barplot to show the distribution of the number of children per family. Set the bars to something other than the default `width`. Scale the x-axis so that there is a tick mark for each bar. Choose appropriate colors, labels, themes, and/or and other types of formatting that you feel will enhance the meaning or visual appearance of the plot.  (Hint: Use `count()` to find out how many families have a given number of children, then use that information to create your plot.)
 
 ```{r childrenbarplot}
+ggplot(dataset_2, aes(num_children)) +
+  geom_bar(width = 1, color = "white", fill = "#DC267F") +
+  scale_x_continuous(breaks= 0:15) +
+  labs(title = "Number of children per family", x = "Number of children", y="Number of families") +
+  geom_text(aes(label = ..count..), stat = "count", vjust = -.3, size = 3.5) +
+  theme_linedraw()
 
 ```
 
@@ -139,19 +250,21 @@ Create a barplot to show the distribution of the number of children per family. 
 
 **ANSWER**
 
-ERASE THIS TEXT AND ANSWER QUESTION HERE
+I feel that our updated scatterplot is an improvement to Galton's original diagram beacuse it is visually cleaner. Something that I think would be interesting to add would be a regression line to see how strong of a correlation there is between the two heights.
 
 **Question 2:** Explain the rationale behind the choices you made when creating your scatterplot and barplot, such as size, color, transparency, or other features. What motivated your decisions? 
 
 **ANSWER**
 
-ERASE THIS TEXT AND ANSWER QUESTION HERE
+All three colors I used for both plots came directly from the [IBM "color blind safe" palette](https://davidmathlogic.com/colorblind/#%23648FFF-%23785EF0-%23DC267F-%23FE6100-%23FFB000), and I made sure to use two tones that could not be confused in certain spectra for the scatterplot. I also wanted to clearly show density so I opted for 40% opacity and a larger dot size so that it would still be visible. The barplot was fairly simple because I wanted it to look clean, but I added the bar values for ease of reading.
+
+
 
 **Question 3:** Considering best practices, how does using `coord_fixed()` enhance the authenticity of the information shown in the scatterplot, such as the relationship and spread of the data?
 
 **ANSWER**
 
-ERASE THIS TEXT AND ANSWER QUESTION HERE
+Using `coord_fixed()` helps insure that the spread has not been stretched out or shrunk so that we can more easily see the correlation.
 
 ***
 ```{r}

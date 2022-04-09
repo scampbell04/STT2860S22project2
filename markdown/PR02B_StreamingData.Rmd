@@ -1,6 +1,6 @@
 ---
 title: "Project 2B: Streaming Data"
-author: "PUT YOUR NAME HERE"
+author: "Sally Campbell"
 date: '`r format(Sys.time(), "%A, %B %d, %Y @ %I:%M %p")`'
 output: 
   html_document: 
@@ -23,7 +23,9 @@ knitr::opts_chunk$set(
 ### Packages Used
 
 ```{r loadpackages}
-
+library(tidyverse)
+library(dplyr)
+library(magrittr)
 ```
 
 ### Datasets Used
@@ -35,12 +37,18 @@ The datasets were downloaded from [Disney+ Movies and TV Shows | Kaggle](https:/
 #### Disney+ Dataset
 
 ```{r loaddisneydata}
- 
+disney_data <- read_csv("https://raw.githubusercontent.com/ZoeRobino/STT2860S22project2/main/data/disneypluscontent.csv")
+
+glimpse(disney_data)
+
 ```
 
 #### Streaming Dataset
 
 ```{r loadstreamingdata}
+streaming_data <- read_csv("https://raw.githubusercontent.com/scampbell04/STT2860S22project2/main/data/streamingcontent.csv")
+
+glimpse(streaming_data)
 
 ```
 
@@ -55,7 +63,10 @@ The datasets were downloaded from [Disney+ Movies and TV Shows | Kaggle](https:/
 The Disney+ dataset contains a variable that gives information about the `rating` for each program offering. Convert the variable into a factor that puts the ratings in (roughly) ascending order of age restriction/audience: `TV-Y`, `TV-Y7`, `TV-Y7-FV`, `TV-G`, `G`, `TV-PG`, `PG`, `PG-13`, `TV-14`. If the `date_added` variable is not already in date format, convert it.  
 
 ```{r factorratings}
-
+disney_data <- disney_data %>% 
+  arrange(factor(rating, levels=c("TV-Y", "TV-Y7", "TV-Y7-FV", "TV-G", "G", "TV-PG", "PG", "PG-13", "TV-14"))) 
+glimpse(disney_data)
+  
 ```
 
 #### Dataset #2
@@ -68,16 +79,33 @@ From the streaming content dataset, create a new dataset by doing the following.
 * Split the `Rotten Tomatoes` variable to separate the show rating from the max of `100`. Convert the show rating to a numerical variable.
 
 ```{r pivotlong}
+streaming_data %>% 
+  pivot_longer(cols = 'Netflix':'Disney+',
+               names_to = 'Service',
+               values_to = 'YesNo') %>%
+  filter(YesNo == 1) 
+  #separate(col='IMDB',
+           #into= "Rating",
+           #sep = "10",
+           #remove = TRUE,
+           #convert = FALSE,
+           #extra="warn",
+           #fill = "warn")
+
+  #mutate(name = str_remove(name, '(off|pt)_')) %>% 
+  #spread(name, value) %>% 
+  #select(-loc)
 
 ```
 
-### Visualization 1: Violin Plot
+### Visualization 1: Violin Plot                  
 
 **This plot uses Dataset #1.**
 
 Create a violin plot of `release_year` (x-axis) grouped by `type` of program (y-axis) for programs on Disney+. Fill with a color of your choice. Add a boxplot inside the violin plot, as you did in one of the DataCamp exercises. Re-scale the x-axis so that tick marks appear at whole-decade intervals (e.g., 1980, 1990, 2000). Add an appropriate title and axis labels. Use other formatting as you choose to enhance effectiveness/appearance.
 
 ```{r violinplot}
+ggplot(disney_data, aes(x = 'release_year', y = 'type', color= "red")) + geom_violin(aes(x = 'Release Year', y = 'Type',)) + geom_boxplot() + ggtitle('Type of Movies Released Over The Years')
 
 ```
 

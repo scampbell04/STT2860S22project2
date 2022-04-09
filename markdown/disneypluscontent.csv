@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Disney&#x2B; Movies and TV Shows | Kaggle</title>
+  <meta charset="utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Movies and TV Shows listings on Disney&#x2B;" />
+  <meta name="turbolinks-cache-control" content="no-cache" />
+    <meta name="keywords" content="arts and entertainment,movies and tv shows,data visualization,exploratory data analysis,websites" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#008ABC" />
+  <script nonce="AD/jwyV9TuISYpK/rV828Q==" type="text/javascript">
+    window["pageRequestStartTime"] = 1648650899191;
+    window["pageRequestEndTime"] = 1648650899283;
+    window["initialPageLoadStartTime"] = new Date().getTime();
+  </script>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="anonymous" /><link rel="preconnect" href="https://stats.g.doubleclick.net" /><link rel="preconnect" href="https://storage.googleapis.com" /><link rel="preconnect" href="https://apis.google.com" />
+  <link href="/static/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="manifest" href="/static/json/manifest.json" crossorigin="use-credentials">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/icon?family=Google+Material+Icons"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/icon?family=Google+Material+Icons"
+    rel="stylesheet" media="print" id="async-google-font-1" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" media="print" id="async-google-font-2" />
+  <script nonce="AD/jwyV9TuISYpK/rV828Q==" type="text/javascript">
+    const styleSheetIds = ["async-google-font-1", "async-google-font-2"];
+    styleSheetIds.forEach(function (id) {
+      document.getElementById(id).addEventListener("load", function() {
+        this.media = "all";
+      });
+    });
+  </script>
+
+    <link rel="canonical" href="/shivamb/disney-movies-and-tv-shows" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/vendor.css?v=1f6d99669e949b7dfa2b" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/app.css?v=efe6a48a562d7032cd24" />
+  
+    
+ 
+      <script nonce="AD/jwyV9TuISYpK/rV828Q==">
+        try{(function(a,s,y,n,c,h,i,d,e){d=s.createElement("style");
+        d.appendChild(s.createTextNode(""));s.head.appendChild(d);d=d.sheet;
+        y=y.map(x => d.insertRule(x + "{ opacity: 0 !important }"));
+        h.start=1*new Date;h.end=i=function(){y.forEach(x => x<d.cssRules.length ? d.deleteRule(x) : {})};
+        (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+        })(window,document,['.site-header-react__nav'],'dataLayer',2000,{'GTM-52LNT9S':true});}catch(ex){}
+    </script>
+    <script nonce="AD/jwyV9TuISYpK/rV828Q==">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-12629138-1', {
+            'optimize_id': 'GTM-52LNT9S',
+            'displayFeaturesTask': null,
+            'send_page_view': false,
+            'content_group1': 'Datasets'
+        });
+    </script>
+    <script nonce="AD/jwyV9TuISYpK/rV828Q==" async src="https://www.googletagmanager.com/gtag/js?id=UA-12629138-1"></script>
+
+  
+    
+    <meta property="og:url" content="/shivamb/disney-movies-and-tv-shows" />
+    <meta property="og:title" content="Disney&#x2B; Movies and TV Shows" />
+    <meta property="og:description" content="Movies and TV Shows listings on Disney&#x2B;" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://storage.googleapis.com/kaggle-datasets-images/1624191/2669674/9a4b576a753ea2c9d7b136de6c2fc165/dataset-card.jpg?t=2021-10-02-02-40-05" />
+    <meta property="fb:app_id" content="2665027677054710" />
+
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaggledatasets" />
+        <meta name="twitter:creator" content="@shivamshaz" />
+
+
+  <meta name="twitter:site" content="@Kaggle" /> 
+  
+    
+    <script nonce="AD/jwyV9TuISYpK/rV828Q==" type="application/ld+json">{"@context":"http://schema.org/","@type":"Dataset","name":"Disney+ Movies and TV Shows","description":"&gt; **About this Dataset:** *Disney+ is another one of the most popular media and video streaming platforms. They have close to 1300 movies or tv shows available on their platform, as of mid-2021, they have over 116M Subscribers globally. This tabular dataset consists of listings of all the movies and tv shows available on Amazon Prime, along with details such as - cast, directors, ratings, release year, duration, etc.* \n\n#### **Interesting Task Ideas** \n\n1. Understanding what content is available in different countries\n2. Identifying similar content by matching text-based features \n3. Network analysis of Actors / Directors and find interesting insights  \n4. Does Disney+ has more focus on TV Shows than movies in recent years.\n\n### Other Platform's Datasets (Click on the logos to view) \n\n&gt; \n[![alt text][1]][2] [![alt text][3]][4] [![alt text][5]][6] [![alt text][7]][8]\n[1]: https://i.imgur.com/As0PMcL.jpg =75x20\n[2]: https://www.kaggle.com/shivamb/netflix-shows\n[3]: https://i.imgur.com/r5t3MpQ.jpg =75x20\n[4]: https://www.kaggle.com/shivamb/amazon-prime-movies-and-tv-shows\n[5]: https://i.imgur.com/4a4ZMuy.png =75x30\n[6]: https://www.kaggle.com/shivamb/disney-movies-and-tv-shows\n[7]: https://i.imgur.com/nCL8Skc.png?1 =75x32\n[8]: https://www.kaggle.com/shivamb/hulu-movies-and-tv-shows\n\n- [Amazon Prime Video Movies and TV Shows](https://www.kaggle.com/shivamb/amazon-prime-movies-and-tv-shows)\n- [Disney+ Movies and TV Shows](https://www.kaggle.com/shivamb/disney-movies-and-tv-shows)\n- [Netflix Prime Video Movies and TV Shows](https://www.kaggle.com/shivamb/netflix-shows)\n- [Hulu Movies and TV Shows](https://www.kaggle.com/shivamb/hulu-movies-and-tv-shows)\n","url":"https://www.kaggle.com/shivamb/disney-movies-and-tv-shows","version":2,"keywords":["subject, arts and entertainment","subject, arts and entertainment, movies and tv shows","technique, data visualization","technique, exploratory data analysis","subject, science and technology, internet, websites"],"license":{"@type":"CreativeWork","name":"Data files © Original Authors","url":""},"identifier":["1624191"],"includedInDataCatalog":{"@type":"DataCatalog","name":"Kaggle","url":"https://www.kaggle.com"},"creator":{"@type":"Person","name":"Shivam Bansal","url":"https://www.kaggle.com/shivamb","image":"https://storage.googleapis.com/kaggle-avatars/thumbnails/1571785-kg.jpeg"},"distribution":[{"@type":"DataDownload","requiresSubscription":true,"encodingFormat":"zip","fileFormat":"zip","contentUrl":"https://www.kaggle.com/datasets/shivamb/disney-movies-and-tv-shows/download","contentSize":"134087 bytes"}],"commentCount":2,"dateModified":"2021-11-29T02:25:49.41Z","discussionUrl":"https://www.kaggle.com/shivamb/disney-movies-and-tv-shows/discussion","alternateName":"Movies and TV Shows listings on Disney+","isAccessibleForFree":true,"thumbnailUrl":"https://storage.googleapis.com/kaggle-datasets-images/1624191/2669674/9a4b576a753ea2c9d7b136de6c2fc165/dataset-card.jpg?t=2021-10-02-02-40-05","interactionStatistic":[{"@type":"InteractionCounter","interactionType":"http://schema.org/CommentAction","userInteractionCount":2},{"@type":"InteractionCounter","interactionType":"http://schema.org/DownloadAction","userInteractionCount":7679},{"@type":"InteractionCounter","interactionType":"http://schema.org/ViewAction","userInteractionCount":49583},{"@type":"InteractionCounter","interactionType":"http://schema.org/LikeAction","userInteractionCount":187}]}</script>
+
+
+  
+    
+
+  
+    
+    
+<script nonce="AD/jwyV9TuISYpK/rV828Q==" type="text/javascript">
+    var Kaggle = window.Kaggle || {};
+
+    Kaggle.Current = {
+        antiForgeryToken: 'CfDJ8LdUzqlsSWBPr4Ce3rb9VL-wQwLOaYrbI4cpNbxkaIvfooHb9A-drK7Cpx3JLaQzA6yZRnleb30YPm7wZwHKgjL3rQVRXQj0wWj49ymPuB2i3_aostd5rtm0xgV0nKUjNc8lIjyHIogTGRA39UzVnIk',
+        isAnonymous: true,
+        analyticsToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDg2NTE3OTksIlVzZXJJZCI6MH0.HdKsqRhnkOmlC70VrkrysGZrIDv8oK9LOYovBJvRI3g',
+        analyticsTokenExpiry: 15,
+        
+        
+        
+        
+        
+        
+        
+        enableRapidash: true, 
+    }
+        Kaggle.Current.log = function(){};
+        Kaggle.Current.warn = function(){};
+
+    var decodeUserDisplayName = function () {
+        var escapedUserDisplayName = Kaggle.Current.userDisplayNameEscaped || "";
+        try {
+            var textVersion = new DOMParser().parseFromString(escapedUserDisplayName, "text/html").documentElement.textContent;
+            if (textVersion) {
+                return textVersion;
+            }
+        } catch(ex) {}
+        return escapedUserDisplayName;
+    }
+    Kaggle.Current.userDisplayName = decodeUserDisplayName();
+</script>
+
+    
+
+<script nonce="AD/jwyV9TuISYpK/rV828Q==" type="text/javascript">
+    var Kaggle = window.Kaggle || {};
+    Kaggle.PageMessages = [];
+</script>
+
+
+
+    <script nonce="AD/jwyV9TuISYpK/rV828Q==">window['useKaggleAnalytics'] = true;</script>
+
+  <script id="gapi-target" nonce="AD/jwyV9TuISYpK/rV828Q==" src="https://apis.google.com/js/api.js" defer
+    async></script>
+  <script nonce="AD/jwyV9TuISYpK/rV828Q==" src="/static/assets/runtime.js?v=619cdbd90ad0876cff75" data-turbolinks-track="reload"></script>
+  <script nonce="AD/jwyV9TuISYpK/rV828Q==" src="/static/assets/vendor.js?v=a2004e5f19533473e100" data-turbolinks-track="reload"></script>
+  <script nonce="AD/jwyV9TuISYpK/rV828Q==" src="/static/assets/app.js?v=7af02365b040f22aeb32" data-turbolinks-track="reload"></script>
+    <script nonce="AD/jwyV9TuISYpK/rV828Q==" type="text/javascript">
+      window.kaggleStackdriverConfig = {
+        key: 'AIzaSyA4eNqUdRRskJsCZWVz-qL655Xa5JEMreE',
+        projectId: 'kaggle-161607',
+        service: 'web-fe',
+        version: 'ci',
+        userId: '0'
+      }
+    </script>
+</head>
+
+<body data-turbolinks="false">
+  <main>
+    
+
+
+
+
+
+
+<div id="site-container"></div>
+<div data-component-name="NavigationContainer" style="display: flex; flex-direction: column; flex: 1 0 auto;"></div><script class="kaggle-component" nonce="AD/jwyV9TuISYpK/rV828Q==">var Kaggle=window.Kaggle||{};Kaggle.State=Kaggle.State||[];Kaggle.State.push({"navigationType":"BOTH_NAV"});performance && performance.mark && performance.mark("NavigationContainer.componentCouldBootstrap");</script>
+<div id="site-body" class="hide">
+    
+
+<div data-component-name="DatasetMaterialContainer" style="display: flex; flex-direction: column; flex: 1 0 auto;"></div><script class="kaggle-component" nonce="AD/jwyV9TuISYpK/rV828Q==">var Kaggle=window.Kaggle||{};Kaggle.State=Kaggle.State||[];Kaggle.State.push({"basics":{"datasetId":1624191,"slug":"disney-movies-and-tv-shows","title":"Disney\u002B Movies and TV Shows","description":"\u0026gt; **About this Dataset:** *Disney\u002B is another one of the most popular media and video streaming platforms. They have close to 1300 movies or tv shows available on their platform, as of mid-2021, they have over 116M Subscribers globally. This tabular dataset consists of listings of all the movies and tv shows available on Amazon Prime, along with details such as - cast, directors, ratings, release year, duration, etc.* \n\n#### **Interesting Task Ideas** \n\n1. Understanding what content is available in different countries\n2. Identifying similar content by matching text-based features \n3. Network analysis of Actors / Directors and find interesting insights  \n4. Does Disney\u002B has more focus on TV Shows than movies in recent years.\n\n### Other Platform\u0027s Datasets (Click on the logos to view) \n\n\u0026gt; \n[![alt text][1]][2] [![alt text][3]][4] [![alt text][5]][6] [![alt text][7]][8]\n[1]: https://i.imgur.com/As0PMcL.jpg =75x20\n[2]: https://www.kaggle.com/shivamb/netflix-shows\n[3]: https://i.imgur.com/r5t3MpQ.jpg =75x20\n[4]: https://www.kaggle.com/shivamb/amazon-prime-movies-and-tv-shows\n[5]: https://i.imgur.com/4a4ZMuy.png =75x30\n[6]: https://www.kaggle.com/shivamb/disney-movies-and-tv-shows\n[7]: https://i.imgur.com/nCL8Skc.png?1 =75x32\n[8]: https://www.kaggle.com/shivamb/hulu-movies-and-tv-shows\n\n- [Amazon Prime Video Movies and TV Shows](https://www.kaggle.com/shivamb/amazon-prime-movies-and-tv-shows)\n- [Disney\u002B Movies and TV Shows](https://www.kaggle.com/shivamb/disney-movies-and-tv-shows)\n- [Netflix Prime Video Movies and TV Shows](https://www.kaggle.com/shivamb/netflix-shows)\n- [Hulu Movies and TV Shows](https://www.kaggle.com/shivamb/hulu-movies-and-tv-shows)\n","viewCount":49583,"downloadCount":7679,"scriptCount":28,"topicCount":2,"owner":{"id":1571785,"imageUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/1571785-kg.jpeg","name":"Shivam Bansal","profileUrl":"/shivamb","slug":"shivamb","userTier":"GRANDMASTER"},"license":{"id":11,"name":"Data files \u00A9 Original Authors"},"overview":"Movies and TV Shows listings on Disney\u002B","collaboratorList":{"owner":{"userId":1571785,"profileUrl":"/shivamb","thumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/1571785-kg.jpeg","name":"Shivam Bansal","slug":"shivamb","userTier":"GRANDMASTER","type":"OWNER"}},"coverImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/1624191/2669674/9a4b576a753ea2c9d7b136de6c2fc165/dataset-cover.jpg?t=2021-10-02-02-40-05","data":{"totalSize":134087,"isFileset":true,"canSeeDownload":true,"firestorePath":"FH1ggEbmLimwgGMorfEg/versions/1pAT2gVbrQNSJulBCcsT","downloadUrl":"/datasets/shivamb/shivamb/download?datasetVersionNumber=2","versionId":2911094,"id":1649835},"voteCount":187,"medalUrl":"/static/images/medals/datasets/goldl@2x.png","downloadUrl":"/datasets/shivamb/disney-movies-and-tv-shows/download","lastUpdateTime":"2021-11-29T02:25:49.410Z","datasetVersionNumber":2,"creatorDisplayName":"Shivam Bansal","cardImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/1624191/2669674/9a4b576a753ea2c9d7b136de6c2fc165/dataset-card.jpg?t=2021-10-02-02-40-05","categories":{"tags":[{"id":2200,"name":"arts and entertainment","fullPath":"subject \u003E arts and entertainment","listingUrl":"/datasets?group=public\u0026tagids=2200","description":"Activities that holds the attention and interest of an audience, or gives pleasure and delight. It can be an idea or a task, but is more likely to be one of the activities or events that have developed over thousands of years specifically for the purpose of keeping an audience\u0027s attention.","datasetCount":18709,"notebookCount":23181,"tagUrl":"/tags/arts-and-entertainment","displayName":"Arts and Entertainment"},{"id":2303,"name":"movies and tv shows","fullPath":"subject \u003E arts and entertainment \u003E movies and tv shows","listingUrl":"/datasets?group=public\u0026tagids=2303","description":"Grab a bucket of popcorn and come analyze these movie ratings. The world must know which blockbuster film is the blockbuster film of all time!","datasetCount":5575,"competitionCount":3,"notebookCount":1826,"tagUrl":"/tags/film","displayName":"Movies and TV Shows"},{"id":13208,"name":"data visualization","fullPath":"technique \u003E data visualization","listingUrl":"/datasets?group=public\u0026tagids=13208","description":"The art of depicting data in a visual format. Using charts and graphs, it is easier to observe patterns, relationships, and outliers.","datasetCount":1724,"notebookCount":24766,"tagUrl":"/tags/data-visualization","displayName":"Data Visualization"},{"id":13201,"name":"exploratory data analysis","fullPath":"technique \u003E exploratory data analysis","listingUrl":"/datasets?group=public\u0026tagids=13201","description":"","datasetCount":1434,"notebookCount":21801,"tagUrl":"/tags/eda","displayName":"Exploratory Data Analysis"},{"id":1115,"name":"websites","fullPath":"subject \u003E science and technology \u003E internet \u003E websites","listingUrl":"/datasets?group=public\u0026tagids=1115","description":"Websites, like this one, are collections of content that can be found under a specific address. These datasets include information on individual websites or collections of websites.","datasetCount":192,"notebookCount":166,"tagUrl":"/tags/web-sites","displayName":"Websites"}]},"datasetExternalUrl":"https://www.kaggle.com/datasets/shivamb/disney-movies-and-tv-shows","ownerTwitter":"shivamshaz","forumId":1644796,"datasetVersionId":2864236,"canCreateTasks":true,"moderationStatus":"PRIVATED_MODERATION_STATUS_NO_ABUSE","lastVersionNumber":2,"diffType":"VERSIONED"},"@wf": "Datasets.DatasetMaterialDtoWireFormat3"});performance && performance.mark && performance.mark("DatasetMaterialContainer.componentCouldBootstrap");</script>
+<script nonce="AD/jwyV9TuISYpK/rV828Q==" type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+    preferredFont: "TeX",
+    availableFonts: ["STIX", "TeX"],
+    linebreaks: {
+    automatic: true
+    },
+    EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+    inlineMath: [["\\(", "\\)"], ["\\\\(", "\\\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+    processEscapes: true,
+    ignoreClass: "tex2jax_ignore|dno"
+    },
+    TeX: {
+    noUndefined: {
+    attributes: {
+    mathcolor: "red",
+    mathbackground: "#FFEEEE",
+    mathsize: "90%"
+    }
+    }
+    },
+    Macros: {
+    href: "{}"
+    },
+    skipStartupTypeset: true,
+    messageStyle: "none",
+    extensions: [],
+    });
+</script>
+<script type="text/javascript" nonce="AD/jwyV9TuISYpK/rV828Q==">
+  window.addEventListener("DOMContentLoaded", () => {
+    const head = document.getElementsByTagName("head")[0];
+    const useProdHosts = ["www.kaggle.com", "admin.kaggle.com"];
+    const subdomain = useProdHosts.includes(window.location.hostname) ? "www" : "staging";
+
+    const lib = document.createElement("script");
+    lib.type = "text/javascript";
+    lib.src = `https://${subdomain}.kaggleusercontent.com/static/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML`;
+    head.appendChild(lib);
+  });
+</script>
+
+
+
+
+
+</div>
+
+
+
+
+  </main>
+</body>
+
+</html>
