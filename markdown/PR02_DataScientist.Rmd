@@ -1,7 +1,7 @@
 ---
 title: "Becoming a Data Scientist"
 subtitle: "STT2860 S22 Project 02"
-author: "Author: YOUR NAME HERE"
+author: "Author: Sally Campbell"
 date: "`r format(Sys.time(), '%A, %B %d, %Y @ %I:%M %p')`"
 output: 
   html_document: 
@@ -12,38 +12,38 @@ output:
 
 **Q1: What is the name of the person interviewed?**
 
-ANSWER:
+ANSWER: Trey Causey
 
 **Q2: Why did you choose the particular interview you did?**
 
-ANSWER:
+ANSWER: I chose this interview because the summary mentioned his work in sports analytics, which I will be taking a course on in the upcoming semester.
 
 **Q3: Does the person consider themselves a data scientist?**
 
-ANSWER:
+ANSWER: Causey does consider himself a data scientist as he primarily works with statistics, machine learning, and problem-solving in programming and data, however, he does note that data science is an ill-defined and often over-saturated term. 
 
 **Q4: What is their formal and self-taught education in data science?**
 
-ANSWER:
+ANSWER: Causey began his data science path by teaching himself basic. He later began his formal education in high school when he took AP computer programming along with a class on C at his local community college. He went on to do a year of computer science at Virginia Tech before switching to psychology.
 
 **Q5: What has been their career path? Did they start off in data science?**
 
-ANSWER:
+ANSWER: Causey took an interest in machine learning while writing his dissertation, that he did not finish, and went straight for an industry job. His first job out of college was with Zulily doing recommendation systems, which did deal with data science. He also began working with the NFL as a sports analytics consultant. Currently, along with the NFL, Causey works with many different teams across soccer and basketball as an analyst. 
 
 **Q6: What programs/technologies to they use when working in data science?**
 
-ANSWER:
+ANSWER: Causey primarily uses R and Python, however he also works in SQL and the various databases used by different sports leagues. 
 
 **Q7: What is one interesting (to you) data science problem they have worked on?**
 
-ANSWER:
+ANSWER: Causey took on the New York Times 4th Down bot and rebuilt the system from scratch. The program calculates the probability of successfully getting a first down and making a field goal.
 
 **Q8: Are there any specific pieces of advice they gave that inspire/resonate with you?**
 
-ANSWER:
+ANSWER: Causey states that, while the basics of data science are statistics and programming, almost everything else is learning on the job.
 
 **Q9: Was there anything that surprised you or that you particularly identified with?**
 
-ANSWER:
+ANSWER: Something that I identified with was Causeys lack of interest in programming during college because it reassured me that he still managed to come back to data science and analytics.
 
 ***
