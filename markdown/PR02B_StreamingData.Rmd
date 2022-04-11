@@ -26,6 +26,7 @@ knitr::opts_chunk$set(
 library(tidyverse)
 library(dplyr)
 library(magrittr)
+library(waffle)
 ```
 
 ### Datasets Used
@@ -63,10 +64,10 @@ glimpse(streaming_data)
 The Disney+ dataset contains a variable that gives information about the `rating` for each program offering. Convert the variable into a factor that puts the ratings in (roughly) ascending order of age restriction/audience: `TV-Y`, `TV-Y7`, `TV-Y7-FV`, `TV-G`, `G`, `TV-PG`, `PG`, `PG-13`, `TV-14`. If the `date_added` variable is not already in date format, convert it.  
 
 ```{r factorratings}
-disney_data <- disney_data %>% 
-  arrange(factor(rating, levels=c("TV-Y", "TV-Y7", "TV-Y7-FV", "TV-G", "G", "TV-PG", "PG", "PG-13", "TV-14"))) 
-glimpse(disney_data)
-  
+disney_stream <- disney_data %>%
+  mutate(rating = factor(rating,
+  levels = c("TV-Y", "TV-Y7", "TV-Y7-FV", "TV-G", "G", "TV-PG", "PG", "PG-13", "TV-14")))
+glimpse(disney_stream)
 ```
 
 #### Dataset #2
@@ -84,17 +85,8 @@ streaming_data %>%
                names_to = 'Service',
                values_to = 'YesNo') %>%
   filter(YesNo == 1) 
-  #separate(col='IMDB',
-           #into= "Rating",
-           #sep = "10",
-           #remove = TRUE,
-           #convert = FALSE,
-           #extra="warn",
-           #fill = "warn")
-
-  #mutate(name = str_remove(name, '(off|pt)_')) %>% 
-  #spread(name, value) %>% 
-  #select(-loc)
+  separate(streaming_data, col = IMDb , into = c("ratingIMDb", max = 10), sep = "/")
+  separate(streaming_data, col = `Rotten Tomatoes`, into = c("rating`Rotten Tomatoes`", max = 100), sep = "/") 
 
 ```
 
@@ -105,8 +97,12 @@ streaming_data %>%
 Create a violin plot of `release_year` (x-axis) grouped by `type` of program (y-axis) for programs on Disney+. Fill with a color of your choice. Add a boxplot inside the violin plot, as you did in one of the DataCamp exercises. Re-scale the x-axis so that tick marks appear at whole-decade intervals (e.g., 1980, 1990, 2000). Add an appropriate title and axis labels. Use other formatting as you choose to enhance effectiveness/appearance.
 
 ```{r violinplot}
-ggplot(disney_data, aes(x = 'release_year', y = 'type', color= "red")) + geom_violin(aes(x = 'Release Year', y = 'Type',)) + geom_boxplot() + ggtitle('Type of Movies Released Over The Years')
-
+ggplot(disney_data, aes(x = release_year, y = type)) +
+  geom_violin(fill = 'thistle') +
+  geom_boxplot(alpha = 0, width = 0.3) +
+  scale_x_continuous(breaks = seq(1920, 2030, 10))+
+  labs(x = "Release Year", y = "Type of Program",title = "Types of Programs on Disney+ vs Release date")+
+    theme(plot.title = element_text(hjust = 0.5))
 ```
 
 ### Visualization 2: Waffle Plot
@@ -122,7 +118,7 @@ Create a waffle plot to show the distribution of program `type` on Disney+.
 Hint: Use `round(100 * prop.table(table(DATASETNAME$VARIABLENAME)))` to create the input data for the waffle plot. Swap out the capital letter placeholders for the correct dataset name and variable name.
 
 ```{r waffleplot}
-
+waffle(round(100 * prop.table(table(disney_data$rating))),  x = 'Programs Per Square', title = 'Streaming Content on Disney+', colors = c('palegreen','palegreen4','skyblue','skyblue4', 'mediumpurple', 'mediumorchid4', 'hotpink', 'hotpink4', 'royalblue'))
 ```
 
 ### Visualization 3: Ratings Bar Plot
@@ -132,7 +128,14 @@ Hint: Use `round(100 * prop.table(table(DATASETNAME$VARIABLENAME)))` to create t
 Create a horizontal barplot to show the frequencies of the various `rating` categories for programs on Disney+ (i.e., use `y =` rather than `x =` for the variable you are plotting). **You will need to remove a couple `NA` values first.** Facet by `type` so that you have side-by-side plots for the two different program types. Add an appropriate title and axis labels, as well as other formatting to enhance effectiveness/appearance. 
 
 ```{r ratingsbarplot}
-
+disney_data%>%
+filter(!is.na(rating))
+my_table <- table(disney_data$rating)
+ggplot(data=subset(disney_data, !is.na(rating)), aes(x = frequency(rating), y = rating,fill = type)) +
+  geom_col()+
+  facet_grid(.~type)+
+  labs(x = "Frequency", y = "Ratings", title = "Frequency of Movie and TV Shows by Ratings on Disney+") + 
+  theme(plot.title = element_text(hjust = 0.5))
 ```
 
 ### Visualization 4: Services Bar Plot
@@ -142,7 +145,15 @@ Create a horizontal barplot to show the frequencies of the various `rating` cate
 Create a barplot to display how many shows are offered on each of the four streaming services. Choose appropriate colors, labels, themes, and/or and other types of formatting that you feel will enhance the meaning or visual appearance of the plot. 
 
 ```{r showsbarplot}
+services = c("Netflix","Hulu","Prime Video","Disney+")
+cyltable<- table(streaming_data$Netflix,streaming_data$Hulu,streaming_data$`Prime Video`,streaming_data$`Disney+`)
+df <- data.frame(services,cyltable)
 
+ggplot(df, aes(x = reorder(services, -cyltable), y = cyltable, fill = services))+
+ geom_bar(stat = "identity")+ 
+ 
+  labs( x = "Services", y = "Number of TV Shows", title = "Count of TV Shows by Service") +
+  theme(plot.title = element_text(hjust = 0.5)) 
 ```
 
 ### Visualization 5: Choose a Plot!
@@ -150,7 +161,12 @@ Create a barplot to display how many shows are offered on each of the four strea
 Create one other plot of your choice using either dataset to explore a question of interest. You are welcome to perform additional manipulations on the data, if needed. Add an appropriate title and axis labels, as well as any other necessary formatting.
 
 ```{r}
+my_table <- table(streaming_data$Age)
+lbls <- paste(names(my_table), "\n", my_table, sep="")
+pie(my_table, main="Piechart for Shows in age group", col=rainbow(length(my_table)),labels = lbls,lty = 2)
 
+
+legend("topright", c("all","7+","13+","16+","18+"), cex=0.8, fill=my_table)
 ```
 
 <hr>
@@ -161,25 +177,27 @@ Create one other plot of your choice using either dataset to explore a question 
 
 **ANSWER**
 
-1)
+1)In Plot 1 We see that The majority of the content on Disney+ is Tv-G and Tv-PG due to the fact that Disney+ is geared towards Children.
 
-2)
+2) We also Notice in the Counts by Service chart, that Disney+ has the least amount of shows, probably because Disney+ most likely only carries Kids shows and non-fiction documentaries.
 
-3)
+3) We also Notice that Netflix Has the highest show count, We suspect that’s due to the fact that Netflix is a streaming service built for all ages, which means there are multiple options for every age group causing there to be more overall videos.
 
-4)
+4) We Also Saw in the Last Chart that the viewers that are watching the most are ages 16+, Which might be due to the high electronic consumption by that age group.
 
-5)
+5) Overall, Disney+ is extremely popular for young children and Netflix for everyone overall, and most likely, due to Visual number 5, the age group of 16+.
 
 **Question 2:** What other data would you like to have, or which existing variables would you like to see transformed, if you were going to do further explorations or visualizations? Give at least two examples.
 
 **ANSWER**
 
-ERASE THIS TEXT AND ANSWER QUESTION HERE
+I would Like to see all streaming services divided by rating and age group, as well as see the annual volume per age group of people registering for each streaming service.
 
 **Question 3:** Explain the rationale behind the choices you made with regard to plot type, formatting, and so on, when you created Visualization 5. What motivated your decisions? 
 
 **ANSWER**
+
+It was opening up the discussion, we covered Tv ratings but we expanded when we considered who’s actually watching these shows and the number of people per age group. It allows us to talk about the individual streaming services while also being able to apply age as well. 
 
 ***
 ```{r}

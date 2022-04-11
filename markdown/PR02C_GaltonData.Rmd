@@ -131,8 +131,7 @@ glimpse(data_notebook)
 
 ```{r}
 data_notebook <- data_notebook %>%
-  select(familyID = FamilyID,
-         page = Page)
+  mutate(familyID = as.numeric(ifelse(FamilyID == "136A", 205, FamilyID)))
 glimpse(data_notebook)
 ```
 
